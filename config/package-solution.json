@@ -3,7 +3,7 @@
   "solution": {
     "name": "webpart-client-side-solution",
     "id": "ba1bf267-7009-4d01-925d-555b4f5eb1d6",
-    "version": "1.0.0.0",
+    "version": "2.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
@@ -30,7 +30,7 @@
         "title": "webpart Feature",
         "description": "The feature that activates elements of the webpart solution.",
         "id": "78562851-aac1-46f0-833b-d4dc566c5bb5",
-        "version": "1.0.0.0",
+        "version": "2.0.0.0",
         "assets": {
           "elementManifests": [
             "element.xml"
