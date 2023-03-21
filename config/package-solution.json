@@ -34,8 +34,10 @@
         "assets": {
           "elementManifests": [
             "element.xml"
+          ],
+          "elementFiles":[
+            "schema.xml"
           ]
-          
         }
       }
     ]

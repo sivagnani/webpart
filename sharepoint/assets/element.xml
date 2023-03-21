@@ -1,9 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-    <ListInstance 
-        FeatureId="00bfea71-e717-4e80-aa17-d0c71b360101" 
-        Url="spfxDocumentLibrary"
-        Title="spfxDocumentLibrary"
-        TemplateType="101">
+    <!-- creating site columns -->
+    <Field ID="{060E50AC-E9C1-4D3C-B1F9-DE0BCAC300F7}"
+    Name="SPFxCurrency"
+    DisplayName="Currency"
+    Type="Currency"
+    Required="FALSE"
+    Group="SPFx Columns" />
+    <Field ID="{060E50AC-E9C1-4D3C-B1F9-DE0BCAC300F8}"
+    Name="SPFxText"
+    DisplayName="Text"
+    Type="Text"
+    Required="FALSE"
+    Group="SPFx Columns" />
+    <Field ID="{060E50AC-E9C1-4D3C-B1F9-DE0BCAC300F9}"
+    Name="SPFxNote"
+    DisplayName="Note"
+    Type="Note"
+    Required="FALSE"
+    Group="SPFx Columns" />
+    <Field ID="{060E50AC-E9C1-4D3C-B1F9-DE0BCAC300F0}"
+    Name="SPFxChoice"
+    DisplayName="Choice"
+    Type="Choice"
+    Required="FALSE"
+    Group="SPFx Columns" >
+    <CHOICES>
+      <CHOICE>Choice 1</CHOICE>
+      <CHOICE>Choice 2</CHOICE>
+    </CHOICES>
+    </Field>
+    <Field ID="{060E50AC-E9C1-4D3C-B1F9-DE0BCAC300F1}"
+    Name="SPFxDate"
+    DisplayName="DateTime"
+    Type="DateTime"
+    Required="FALSE"
+    Group="SPFx Columns" />
+    <Field ID="{060E50AC-E9C1-4D3C-B1F9-DE0BCAC300F2}"
+    Name="SPFxNumber"
+    DisplayName="Number"
+    Type="Number"
+    Required="FALSE"
+    Group="SPFx Columns" />
+    <Field ID="{060E50AC-E9C1-4D3C-B1F9-DE0BCAC300F3}"
+    Name="SPFxUser"
+    DisplayName="User"
+    Type="User"
+    Required="FALSE"
+    Group="SPFx Columns" />
+    <Field ID="{060E50AC-E9C1-4D3C-B1F9-DE0BCAC300F4}"
+    Name="SPFxLookup"
+    DisplayName="Lookup"
+    Type="Lookup"
+    List="Lists/sample"
+    FieldRef="Title"
+    Required="FALSE"
+    Group="SPFx Columns" />
+    <!-- creating content type -->
+    <ContentType ID="0x010042D0C1C200A14B6887742B6344675C8D"
+    Name="SPFxContent"
+    Group="SPFx Content Types"
+    Description="Sample content types from web part solution">
+    <FieldRefs>
+    <FieldRef ID="{060E50AC-E9C1-4D3C-B1F9-DE0BCAC300F7}" />
+    <FieldRef ID="{060E50AC-E9C1-4D3C-B1F9-DE0BCAC300F8}" />
+    <FieldRef ID="{060E50AC-E9C1-4D3C-B1F9-DE0BCAC300F9}" />
+    <FieldRef ID="{060E50AC-E9C1-4D3C-B1F9-DE0BCAC300F0}" />
+    <FieldRef ID="{060E50AC-E9C1-4D3C-B1F9-DE0BCAC300F1}" />
+    <FieldRef ID="{060E50AC-E9C1-4D3C-B1F9-DE0BCAC300F2}" />
+    <FieldRef ID="{060E50AC-E9C1-4D3C-B1F9-DE0BCAC300F3}" />
+    <FieldRef ID="{060E50AC-E9C1-4D3C-B1F9-DE0BCAC300F4}" />
+    </FieldRefs>
+    </ContentType>
+    <!-- created a list -->
+    <ListInstance
+    CustomSchema="schema.xml"
+    FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+    Title="SPFx sample List"
+    Description="SPFx List"
+    TemplateType="100"
+    Url="Lists/Practise">
+    <Data>
+        <Rows>
+            <Row>
+                <Field Name="SPFxText">gnani</Field>
+            </Row>
+            <Row>
+                <Field Name="SPFxNumber">123</Field>
+            </Row>
+            <Row>
+                <Field Name="SPFxChoice">Choice 2</Field>
+            </Row>
+        </Rows>
+    </Data>
     </ListInstance>
 </Elements>
